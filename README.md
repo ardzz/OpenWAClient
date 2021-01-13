@@ -1,6 +1,6 @@
 ---
 description: >-
-  OpenWA Client PHP adalah sebual library yang dibuat untuk membantu para
+  OpenWA Client PHP adalah sebuah library yang dibuat untuk membantu para
   developer PHP menggunakan RESt API dari
   https://www.npmjs.com/package/@open-wa/wa-automate
 ---
