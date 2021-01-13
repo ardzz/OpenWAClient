@@ -10,9 +10,4 @@ class Number
     {
         return $number . "@c.us";
     }
-
-    static function vCardFormat($number): string
-    {
-        return "+" . $number;
-    }
 }
