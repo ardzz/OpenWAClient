@@ -1,2 +1,5 @@
 /main.php
 .gitignore
+server-side
+client-side
+.gitbook
