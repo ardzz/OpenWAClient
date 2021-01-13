@@ -1,0 +1,25 @@
+{
+    "name": "ardzz/openwa",
+    "description": "@open-wa/wa-automate Client",
+    "type": "library",
+    "require": {
+      "guzzlehttp/guzzle": "^7.2",
+      "behat/transliterator": "~1.0",
+      "ext-json": "*",
+      "ext-fileinfo": "*",
+      "ext-curl": "*",
+      "ext-mbstring": "*"
+    },
+    "license": "MITM",
+    "authors": [
+        {
+            "name": "ardzz",
+            "email": "ardzz@indoploit.or.id"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "OpenWAClient\\": "src/"
+        }
+    }
+}
