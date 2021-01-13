@@ -5,10 +5,26 @@ namespace OpenWAClient;
 
 use GuzzleHttp\Exception\GuzzleException;
 
+/**
+ * Class Server
+ *
+ * This class have a responsibility to handle the User tasks
+ *
+ * @package OpenWAClient
+ */
 class Server extends OpenWA
 {
+    /**
+     * @var bool
+     */
     private bool $fromFactory;
 
+    /**
+     *
+     * Check if the server is accessible or not
+     *
+     * @return bool
+     */
     function isAccessible(): bool
     {
         $client = $this->getInit();
@@ -23,6 +39,12 @@ class Server extends OpenWA
         }
     }
 
+    /**
+     *
+     * Check if the RESt API need an authentication (api key)
+     *
+     * @return bool
+     */
     function isNeedAuthentication(): bool
     {
         $client = $this->getInit();
@@ -42,17 +64,35 @@ class Server extends OpenWA
         }
     }
 
+    /**
+     *
+     * Tell the class that the method called from factory
+     *
+     * @return $this
+     */
     function callFromFactory(): Server
     {
         $this->fromFactory = true;
         return $this;
     }
 
+    /**
+     *
+     * Check if the method called from factory or not
+     *
+     * @return bool
+     */
     private function isCalledFromFactory(): bool
     {
         return isset($this->fromFactory) ? $this->fromFactory : false;
     }
 
+    /**
+     *
+     * Check if the api key is valid and can authenticate
+     *
+     * @return bool
+     */
     function isApiKeyValid(): bool
     {
         $client = $this->getInit();
@@ -76,6 +116,12 @@ class Server extends OpenWA
         }
     }
 
+    /**
+     *
+     * Check if the mobile phone (host) is connected on internet
+     *
+     * @return bool
+     */
     function isPhoneConnected(): bool
     {
         $client = $this->getInit()->HttpRequest();
