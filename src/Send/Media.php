@@ -10,9 +10,21 @@ use OpenWAClient\Handler\Response;
 use OpenWAClient\OpenWA;
 use OpenWAClient\FileManager\Media as File;
 
+/**
+ * Class Media
+ *
+ * @package OpenWAClient\Send
+ */
 class Media extends OpenWA
 {
 
+    /**
+     * @param     String             $filename            Image file name [file_name].[whitelisted extension]
+     * @param     String             $caption             Caption of image
+     * @param     String|Integer     $receiver_number     Receiver number [country code][number]
+     *
+     * @return Output
+     */
     function image(String $filename, String $caption, $receiver_number): Output
     {
         $request = $this->request("sendImage", [
@@ -27,7 +39,15 @@ class Media extends OpenWA
         return new Output(new Response($request));
     }
 
-    function imageAsSticker($image, $receiver_number): Output
+    /**
+     * @param     string         $image               Image file name [file_name].[whitelisted extension]
+     * @param     string|int     $receiver_number     Receiver number [country code][number]
+     *
+     * @see File
+     *
+     * @return Output
+     */
+    function imageAsSticker(string $image, $receiver_number): Output
     {
         $request = $this->request("sendImageAsSticker", [
             "args" => [
@@ -39,6 +59,12 @@ class Media extends OpenWA
         return new Output(new Response($request));
     }
 
+    /**
+     * @param     String             $webp_filename       .webp File
+     * @param     String|integer     $receiver_number     Receiver number [country code][number]
+     *
+     * @return Output
+     */
     function rawWebpAsSticker(String $webp_filename, $receiver_number): Output
     {
         $request = $this->request("sendRawWebpAsSticker", [
