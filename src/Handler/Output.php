@@ -4,7 +4,11 @@
 namespace OpenWAClient\Handler;
 
 
-
+/**
+ * Class Output
+ *
+ * @package OpenWAClient\Handler
+ */
 class Output
 {
     /**
@@ -22,22 +26,34 @@ class Output
         $this->output = json_decode($response->getResponse(), 1);
     }
 
+    /**
+     * @return bool
+     */
     protected function verifyResponse(): bool
     {
         return array_key_exists("response", $this->getRawOutput());
     }
 
+    /**
+     * @return string[]
+     */
     function getOutput(): array
     {
         return $this->verifyResponse() ? $this->getRawOutput()["response"] : ["no responses"];
     }
 
+    /**
+     * @return bool
+     */
     function isSuccess(): bool
     {
         return (bool) $this->getRawOutput()["success"];
     }
 
-    function getRawOutput()
+    /**
+     * @return mixed
+     */
+    protected function getRawOutput()
     {
         return $this->output;
     }

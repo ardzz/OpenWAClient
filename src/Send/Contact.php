@@ -4,6 +4,7 @@
 namespace OpenWAClient\Send;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenWAClient\Handler\Exception\VCardException;
 use OpenWAClient\Handler\Number;
 use OpenWAClient\Handler\Output;
@@ -24,7 +25,7 @@ class Contact extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
-     * @throws VCardException
+     * @throws VCardException|GuzzleException
      */
     function VCard(String $fullName, $phoneNumber, $receiver_number): Output
     {
@@ -49,6 +50,7 @@ class Contact extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function Contact($contact_number, $receiver_number): Output
     {

@@ -4,6 +4,7 @@
 namespace OpenWAClient\Send;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenWAClient\Handler\Number;
 use OpenWAClient\Handler\Output;
 use OpenWAClient\Handler\Response;
@@ -24,6 +25,7 @@ class File extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function file(String $filename, String $caption, $receiver_number): Output
     {

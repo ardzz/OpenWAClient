@@ -4,6 +4,7 @@
 namespace OpenWAClient\Send;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenWAClient\Handler\Number;
 use OpenWAClient\Handler\Output;
 use OpenWAClient\Handler\Response;
@@ -24,6 +25,7 @@ class Media extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function image(String $filename, String $caption, $receiver_number): Output
     {
@@ -43,9 +45,10 @@ class Media extends OpenWA
      * @param     string         $image               Image file name [file_name].[whitelisted extension]
      * @param     string|int     $receiver_number     Receiver number [country code][number]
      *
+     * @return Output
+     * @throws GuzzleException
      * @see File
      *
-     * @return Output
      */
     function imageAsSticker(string $image, $receiver_number): Output
     {
@@ -64,6 +67,7 @@ class Media extends OpenWA
      * @param     String|integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function rawWebpAsSticker(String $webp_filename, $receiver_number): Output
     {

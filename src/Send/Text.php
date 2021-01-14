@@ -4,6 +4,7 @@
 namespace OpenWAClient\Send;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenWAClient\Handler\Number;
 use OpenWAClient\Handler\Output;
 use OpenWAClient\Handler\Response;
@@ -22,6 +23,7 @@ class Text extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function text(String $message, $receiver_number): Output
     {
@@ -40,6 +42,7 @@ class Text extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function textWithMention(String $message, $receiver_number): Output
     {
@@ -62,6 +65,7 @@ class Text extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function youtubeLink(String $message, String $url, $receiver_number): Output
     {
@@ -85,6 +89,7 @@ class Text extends OpenWA
      * @param     String|Integer     $receiver_number     Receiver number [country code][number]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function linkWithAutoPreview(String $message, String $url, $receiver_number): Output
     {
