@@ -5,8 +5,14 @@ namespace OpenWAClient\Http;
 
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Class Requests
+ *
+ * @package OpenWAClient\Http
+ */
 class Requests
 {
     /**
@@ -17,8 +23,8 @@ class Requests
     /**
      * Requests constructor.
      *
-     * @param     String     $base_uri
-     * @param     String     $api_key
+     * @param     String          $base_uri     Base Uri (e.g http://localhost:8080/)
+     * @param     String|NULL     $api_key      API Key
      */
     public function __construct(String $base_uri, String $api_key)
     {
@@ -36,11 +42,21 @@ class Requests
        }
     }
 
+    /**
+     * @return Client
+     */
     function guzzle(): Client
     {
         return $this->client;
     }
 
+    /**
+     * @param     String     $end_point     End point API (e.g getMe, getSessionInfo, setMyStatus, ...)
+     * @param     array      $data          Form params
+     *
+     * @return ResponseInterface
+     * @throws GuzzleException
+     */
     function request(String $end_point, Array $data = []): ResponseInterface
     {
         return $client = $this->guzzle()->request("POST", $end_point, [

@@ -4,6 +4,7 @@
 namespace OpenWAClient;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -41,6 +42,7 @@ class OpenWA
      * @param     array      $data          Form params
      *
      * @return ResponseInterface
+     * @throws GuzzleException
      */
     protected function request(string $end_point, Array $data = []): ResponseInterface
     {
