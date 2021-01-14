@@ -44,11 +44,11 @@ class User extends OpenWA
      *
      * Set status account (e.g, Available, Busy, On meeting, Sleep, ...)
      *
-     * @param     String     $status
+     * @param     String     $status     status account (e.g, Available, Busy, On meeting, Sleep, ...)
      *
      * @return Output
      */
-    function setStatus(String $status): Output
+    function setStatus(string $status): Output
     {
         $request = $this->request("setMyStatus", [
             "args" => [
@@ -62,11 +62,11 @@ class User extends OpenWA
      *
      * Set name account
      *
-     * @param     String     $name
+     * @param     String     $name     Name
      *
      * @return Output
      */
-    function setName(String $name): Output
+    function setName(string $name): Output
     {
         $request = $this->request("setMyName", [
             "args" => [
@@ -80,15 +80,15 @@ class User extends OpenWA
      *
      * Set profile picture from image file
      *
-     * @param     String     $file_name
+     * @param     String     $image_file     Image file name [file_name].[whitelisted extension]
      *
      * @return Output
      */
-    function setProfilePicture(String $file_name): Output
+    function setProfilePicture(string $image_file): Output
     {
         $request = $this->request("setProfilePic", [
             "args" => [
-                "data" => Media::format($file_name)
+                "data" => Media::format($image_file)
         ]
         ]);
         return new Output(new Response($request));

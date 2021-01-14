@@ -4,9 +4,13 @@
 namespace OpenWAClient\Send;
 
 
-use OpenWAClient\Factory;
 use OpenWAClient\Initiation;
 
+/**
+ * Class SendFactory
+ *
+ * @package OpenWAClient\Send
+ */
 class SendFactory
 {
     /**
@@ -24,26 +28,41 @@ class SendFactory
         $this->initiation = $initiation;
     }
 
+    /**
+     * @return Initiation
+     */
     private function getInit(): Initiation
     {
         return $this->initiation;
     }
 
+    /**
+     * @return Text
+     */
     function Text(): Text
     {
         return new Text($this->getInit());
     }
 
+    /**
+     * @return Media
+     */
     function Media(): Media
     {
         return new Media($this->getInit());
     }
 
+    /**
+     * @return Contact
+     */
     function Contact(): Contact
     {
         return new Contact($this->getInit());
     }
 
+    /**
+     * @return File
+     */
     function File(): File
     {
         return new File($this->getInit());

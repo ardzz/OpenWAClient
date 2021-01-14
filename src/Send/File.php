@@ -10,9 +10,21 @@ use OpenWAClient\Handler\Response;
 use OpenWAClient\OpenWA;
 use OpenWAClient\FileManager\Media as Filesystem;
 
+/**
+ * Class File
+ *
+ * @package OpenWAClient\Send
+ */
 class File extends OpenWA
 {
 
+    /**
+     * @param     String             $filename            Filename (please don't send large file!)
+     * @param     String             $caption             Caption's file
+     * @param     String|Integer     $receiver_number     Receiver number [country code][number]
+     *
+     * @return Output
+     */
     function file(String $filename, String $caption, $receiver_number): Output
     {
         $request = $this->request("sendFile", [

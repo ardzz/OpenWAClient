@@ -4,10 +4,13 @@
 namespace OpenWAClient;
 
 
-use OpenWAClient\Handler\Output;
-use OpenWAClient\Handler\Response;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Class OpenWA
+ *
+ * @package OpenWAClient
+ */
 class OpenWA
 {
     /**
@@ -25,18 +28,23 @@ class OpenWA
         $this->init = $initiation;
     }
 
+    /**
+     * @return Initiation
+     */
     protected function getInit(): Initiation
     {
         return $this->init;
     }
 
-    protected function request(String $end_point, Array $data = []): ResponseInterface
+    /**
+     * @param     String     $end_point     End point API (e.g getMe, getSessionInfo, setMyStatus, ...)
+     * @param     array      $data          Form params
+     *
+     * @return ResponseInterface
+     */
+    protected function request(string $end_point, Array $data = []): ResponseInterface
     {
         return $this->getInit()->HttpRequest()->request($end_point, $data);
     }
 
-    protected function handleOutput(Response $response): Output
-    {
-        return new Output($response);
-    }
 }
