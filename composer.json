@@ -10,7 +10,7 @@
       "ext-curl": "*",
       "ext-mbstring": "*"
     },
-    "license": "MITM",
+    "license": "MIT",
     "authors": [
         {
             "name": "ardzz",
