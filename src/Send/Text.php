@@ -38,25 +38,6 @@ class Text extends OpenWA
     }
 
     /**
-     * @param     String             $message             Message you'll send
-     * @param     String|Integer     $receiver_number     Receiver number [country code][number]
-     *
-     * @return Output
-     * @throws GuzzleException
-     */
-    function textWithMention(String $message, $receiver_number): Output
-    {
-        $request = $this->request("sendTextWithMentions", [
-            "args" => [
-                "to" => Number::format($receiver_number),
-                "content" => $message
-            ]
-        ]);
-
-        return new Output(new Response($request));
-    }
-
-    /**
      *
      * Send YouTube link with preview (thumbnail & title)
      *

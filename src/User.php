@@ -3,6 +3,7 @@
 
 namespace OpenWAClient;
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenWAClient\FileManager\Media;
 use OpenWAClient\Handler\Output;
 use OpenWAClient\Handler\Response;
@@ -16,30 +17,7 @@ use OpenWAClient\Handler\Response;
  */
 class User extends OpenWA
 {
-    /**
-     *
-     * Get account info (self fetching)
-     *
-     * @return Output
-     */
-    function getMe(): Output
-    {
-        $request = $this->request("getMe");
-        return new Output(new Response($request));
-    }
-
-    /**
-     *
-     * Get session info from Server RESt API
-     *
-     * @return Output
-     */
-    function getSessionInfo(): Output
-    {
-        $request  = $this->request("getSessionInfo");
-        return new Output(new Response($request));
-    }
-
+    
     /**
      *
      * Set status account (e.g, Available, Busy, On meeting, Sleep, ...)
@@ -47,6 +25,7 @@ class User extends OpenWA
      * @param     String     $status     status account (e.g, Available, Busy, On meeting, Sleep, ...)
      *
      * @return Output
+     * @throws GuzzleException
      */
     function setStatus(string $status): Output
     {
@@ -65,6 +44,7 @@ class User extends OpenWA
      * @param     String     $name     Name
      *
      * @return Output
+     * @throws GuzzleException
      */
     function setName(string $name): Output
     {
@@ -83,6 +63,7 @@ class User extends OpenWA
      * @param     String     $image_file     Image file name [file_name].[whitelisted extension]
      *
      * @return Output
+     * @throws GuzzleException
      */
     function setProfilePicture(string $image_file): Output
     {

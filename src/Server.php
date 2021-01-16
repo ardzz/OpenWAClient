@@ -121,6 +121,7 @@ class Server extends OpenWA
      * Check if the mobile phone (host) is connected on internet
      *
      * @return bool
+     * @throws GuzzleException
      */
     function isPhoneConnected(): bool
     {
