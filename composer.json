@@ -1,5 +1,5 @@
 {
-    "name": "ardzz/openwa",
+    "name": "ardzz/openwaclient",
     "description": "@open-wa/wa-automate Client",
     "type": "library",
     "minimum-stability": "dev",
