@@ -4,6 +4,7 @@
 namespace OpenWAClient;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenWAClient\Handler\Exception\OpenWAException;
 use OpenWAClient\Send\SendFactory;
 
@@ -24,6 +25,7 @@ class OpenWAClient
      * @param     String|NULL     $api_key      API Key
      *
      * @throws OpenWAException
+     * @throws GuzzleException
      */
     public function __construct(string $base_uri, String $api_key = NULL)
     {
