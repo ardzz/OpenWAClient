@@ -12,7 +12,7 @@ Send text with mention | ✔
 Send YouTube link with preview (thumbnail & title) | ✔
 Send link with preview meta tags | ✔
 Send image | ✔
-Send video | x
+Send video | ❌
 Send file (alternative ways to send a video) | ✔
 Send sticker from an image | ✔
 Send sticker from an .webp file | ✔
