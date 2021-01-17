@@ -19,6 +19,30 @@ Send sticker from an .webp file | ✔
 Send contact | ✔
 Send VCard (only set name and phone number) | ✔
 
+## Installation
+The recommended way to install OpenWAClient Library is with Composer. Composer is a dependency management tool for PHP that allows you to declare the dependencies your project needs and installs them into your project.
+```bash
+# Install Composer
+curl -sS https://getcomposer.org/installer | php
+```
+You can add Meownime Library as a dependency using Composer:
+```
+composer require ardzz/openwaclient
+```
+Alternatively, you can specify OpenWAClient Library as a dependency in your project's
+existing composer.json file:
+```json
+ {
+   "require": {
+      "ardzz/openwaclient": "^1.0"
+   }
+}
+```
+After installing, you need to require Composer's autoloader:
+```php
+require "vendor/autoload.php";
+```
+You can find out more on how to install Composer, configure autoloading, and other best-practices for defining dependencies at getcomposer.org.
 
 ## Dokumentasi
 
