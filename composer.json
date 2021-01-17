@@ -3,7 +3,7 @@
     "description": "@open-wa/wa-automate Client",
     "type": "library",
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
     "require": {
       "guzzlehttp/guzzle": "^7.2",
       "behat/transliterator": "~1.0",
