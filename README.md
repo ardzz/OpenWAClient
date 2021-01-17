@@ -3,6 +3,7 @@ OpenWA Client PHP adalah sebuah library yang dibuat untuk membantu para develope
 https://www.npmjs.com/package/@open-wa/wa-automate. Library ini dibuat atas inisiatif diri sendiri. Project ini tidak di sponsori pihak manapun.<br>
 
 [![Latest Stable Version](https://poser.pugx.org/ardzz/OpenWAClient/v/stable)](https://packagist.org/packages/ardzz/OpenWAClient)
+[![Packagist Pre Release Version](https://img.shields.io/packagist/vpre/ardzz/OpenWAClient)](https://packagist.org/packages/ardzz/OpenWAClient)
 [![License](https://img.shields.io/packagist/l/ardzz/OpenWAClient)](https://packagist.org/packages/ardzz/OpenWAClient)
 
 | Features | Available |
