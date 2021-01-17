@@ -20,8 +20,7 @@ Send contact | ✔
 Send VCard (only set name and phone number) | ✔
 
 
-# Dokumentasi
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fardzz%2FOpenWAClient.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fardzz%2FOpenWAClient?ref=badge_shield)
+## Dokumentasi
 
 https://ardzz.gitbook.io/openwaclient/
 
