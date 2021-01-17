@@ -53,6 +53,12 @@ You can find out more on how to install Composer, configure autoloading, and oth
 
 https://ardzz.gitbook.io/openwaclient/
 
+## Donations
+
+OVO atau GoPay (085865595604)<br>
+Atau traktir saya di https://trakteer.id/ardhan<br>
+Terimakasih yang sudah berdonasi!<br>
+
 
 ## License
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fardzz%2FOpenWAClient.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fardzz%2FOpenWAClient?ref=badge_large)
