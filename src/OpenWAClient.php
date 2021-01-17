@@ -12,7 +12,7 @@ use OpenWAClient\Send\SendFactory;
  *
  * @package OpenWAClient
  */
-class Factory
+class OpenWAClient
 {
     /**
      * @var Initiation
