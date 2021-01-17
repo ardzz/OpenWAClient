@@ -6,5 +6,3 @@ Library ini dibuat atas inisiatif diri sendiri. Project ini tidak di sponsori pi
 
 # Dokumentasi
 https://ardzz.gitbook.io/openwaclient/
-
-1
