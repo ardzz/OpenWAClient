@@ -1,3 +1,4 @@
 /main.php
 .gitignore
 .idea
+composer.lock
