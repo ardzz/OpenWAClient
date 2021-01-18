@@ -30,7 +30,7 @@ The recommended way to install OpenWAClient Library is with Composer. Composer i
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 ```
-You can add Meownime Library as a dependency using Composer:
+You can add OpenWAClient Library as a dependency using Composer:
 ```
 composer require ardzz/openwaclient
 ```
