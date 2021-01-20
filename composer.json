@@ -10,7 +10,8 @@
       "ext-json": "*",
       "ext-fileinfo": "*",
       "ext-curl": "*",
-      "ext-mbstring": "*"
+      "ext-mbstring": "*",
+       "php": "7.4.*"
     },
     "license": "MIT",
     "authors": [
