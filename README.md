@@ -1,3 +1,7 @@
+<p align="center"><a href="https://symfony.com" target="_blank">
+    <img src="https://github.com/ardzz/OpenWAClient/raw/master/2.png">
+</a></p>
+
 <h2 align="center">OpenWA Client PHP</h2>
 OpenWA Client PHP adalah sebuah library yang dibuat untuk membantu para developer PHP menggunakan RESt API dari
 https://www.npmjs.com/package/@open-wa/wa-automate. Library ini dibuat atas inisiatif diri sendiri. Project ini tidak di sponsori pihak manapun.<br>
